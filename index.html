@@ -42,21 +42,23 @@
             const messageContainer = document.getElementById('message-container');
             const moteContainer = document.getElementById('mote-container');
 
-            // Generate Celestial Motes
-            for (let i = 0; i < 40; i++) {
+            // Generate Warm Motes
+            const colors = ['#F4C542', '#F2A7A0', '#FFFFFF'];
+            for (let i = 0; i < 35; i++) {
                 createMote();
             }
 
             function createMote() {
                 const mote = document.createElement('div');
                 mote.className = 'mote';
-                const size = Math.random() * 3 + 1;
+                const size = Math.random() * 6 + 2;
                 mote.style.width = `${size}px`;
                 mote.style.height = `${size}px`;
                 mote.style.left = `${Math.random() * 100}vw`;
                 mote.style.bottom = `-${Math.random() * 20}vh`;
-                mote.style.animationDuration = `${Math.random() * 15 + 10}s`;
-                mote.style.animationDelay = `${Math.random() * 10}s`;
+                mote.style.background = colors[Math.floor(Math.random() * colors.length)];
+                mote.style.animationDuration = `${Math.random() * 10 + 8}s`;
+                mote.style.animationDelay = `${Math.random() * 5}s`;
                 moteContainer.appendChild(mote);
             }
 
@@ -65,7 +67,7 @@
                 landing.classList.add('hidden');
                 setTimeout(() => {
                     messageContainer.classList.add('active');
-                }, 1000);
+                }, 800);
             };
 
             openBtn.addEventListener('click', openMessage);

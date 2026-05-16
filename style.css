@@ -1,6 +1,6 @@
 :root {
     --bg-earth: #3B2A20;
-    --card-sage: #A8C686;
+    --card-dark-green: #1B261B;
     --accent-glow: #F4C97A;
     --text-cream: #FAF7F0;
     --glass-border: rgba(250, 247, 240, 0.2);
@@ -120,7 +120,7 @@ body {
 }
 
 .glass-card {
-    background: rgba(168, 198, 134, 0.9); /* Sage green with high opacity */
+    background: rgba(27, 38, 27, 0.95); /* Deep Forest Green */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
